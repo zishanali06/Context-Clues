@@ -7,7 +7,12 @@ $(document).ready(function(){
         var newh3 = $('<h3 class="col-6 text-center">Accusation ' + i +'</h3>');
         $('body').append(newh3);
         newh3.click(function(){
-            displayAlert();
+            displayAlert(i);
         })
     };
 });
+
+function displayAlert(i){ 
+    console.log(i);
+    console.log('I accuse ' + friends[i] + ', with the ' + weapons[i] + ' in the ' + locations[i]);
+}
